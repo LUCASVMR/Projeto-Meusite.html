@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+
+/* Imagens e Layout Geral */
+
 .logo {
   max-width: 100px;
   height: auto;
@@ -19,6 +22,7 @@ body {
   color: #e0e0e0;
   position: relative;
 }
+
 body::before {
   content: "";
   position: fixed;
@@ -34,198 +38,215 @@ body::before {
 .header {
   text-align: center;
   padding: 50px 20px;
-  background: rgba(58, 123, 213, 0.15);
-  color: #fff;
-  border-bottom: 2px solid #3a7bd5;
-  border-radius: 0 0 15px 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.header h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.4rem;
-  color: #3a7bd5;
-}
-
-.header p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.1rem;
-  color: #ddd;
-}
-
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  background: rgba(58, 123, 213, 0.1);
-  border-bottom: 2px solid #3a7bd5;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  position: relative; 
-  z-index: 100;
-  gap: 30px;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-links .has-submenu {
-  position: relative; 
-}
-
-.nav-links .has-submenu:hover .submenu {
-  display: block;
-}
-
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 250px;
-  background: rgba(0, 0, 0, 0.95);
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  display: none;
-  z-index: 10;
-}
-
-.submenu li {
-  border-bottom: 1px solid rgba(58, 123, 213, 0.3);
-}
-
-.submenu li:last-child {
-  border-bottom: none;
-}
-
-.sub-link {
-  padding: 12px 20px;
-}
-
-.nav-links a:not(.sub-link) {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:not(.sub-link):hover {
-  color: #3a7bd5;
+  background: rgba(58, 123, 213, 0.15); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 .container {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 30px;
-  background: rgba(20, 20, 20, 0.75);
-  border-radius: 12px;
-  border: 1px solid rgba(58, 123, 213, 0.5);
-  box-shadow: 0 0 15px rgba(58, 123, 213, 0.25);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: rgba(15, 15, 15, 0.85); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
-.container h2,
-.container h3 {
+/* Regra essencial para Imagens Responsivas */
+img {
+    max-width: 100%;
+    height: auto; 
+    display: block;
+    margin: 20px auto; 
+    border-radius: 5px;
+}
+
+/* Responsividade de Fontes (vw) */
+
+
+h1 {
   font-family: 'Orbitron', sans-serif;
   color: #3a7bd5;
-  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(58, 123, 213, 0.8);
+  margin-bottom: 20px;
+  
+  /* Ajuste de Fonte com VW */
+  font-size: 4.5vw; 
 }
 
-.container p {
-  margin-bottom: 15px;
-  font-size: 1rem;
-  color: #ddd;
-}
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+h2 {
+  color: #3a7bd5;
+  border-bottom: 2px solid #3a7bd5;
+  padding-bottom: 5px;
   margin-top: 30px;
+  margin-bottom: 15px;
+  
+  /* Ajuste de Fonte com VW */
+  font-size: 3vw; 
 }
 
-.menu-item a {
+p, li {
+  text-align: justify;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  
+  /* Ajuste de Fonte com VW */
+  font-size: 1.6vw; 
+}
+
+/* Limita o tamanho máximo da fonte para telas muito grandes (desktop) */
+@media (min-width: 1200px) {
+    h1 { font-size: 54px; }
+    h2 { font-size: 36px; }
+    p, li, th, td { font-size: 19.2px; }
+}
+
+
+/* Menu de Navegação */
+
+
+.menu {
+  background: rgba(15, 15, 15, 0.95);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-links li a {
   display: block;
-  padding: 15px;
-  text-align: center;
-  background: rgba(15, 15, 15, 0.85);
   color: #e0e0e0;
   text-decoration: none;
-  border-radius: 8px;
-  border: 1px solid rgba(58, 123, 213, 0.6);
-  transition: all 0.3s ease;
-  font-weight: bold;
+  padding: 15px 20px;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 600;
 }
 
-.menu-item a:hover {
-  background: rgba(58, 123, 213, 0.85);
-  color: #fff;
-  box-shadow: 0 0 15px #3a7bd5aa;
-  transform: scale(1.05);
-}
-
-.dropdown-menu-container select {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(58, 123, 213, 0.6);
-  outline: none;
-  background: rgba(15, 15, 15, 0.85);
-  color: #e0e0e0;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.dropdown-menu-container select:hover {
-  background: #3a7bd5;
-  color: #fff;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-table th,
-table td {
-  border: 1px solid #444;
-  padding: 10px;
-  text-align: center;
-}
-
-table th {
-  background: rgba(58, 123, 213, 0.9);
+.nav-links li a:hover {
+  background-color: #3a7bd5;
   color: #fff;
 }
 
-table tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.05);
+/* Submenu */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  min-width: 250px;
+  z-index: 100;
+  display: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu li a {
+  padding: 12px 20px;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.submenu li a:hover {
+  background-color: #3a7bd5;
 }
 
 
-.footer {
-  text-align: center;
-  padding: 15px;
-  background: rgba(15, 15, 15, 0.8);
-  color: #aaa;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(58, 123, 213, 0.6);
-  position: fixed; 
-  bottom: 0; 
-  width: 100%; 
-  z-index: 99; 
+
+/* 3. Responsividade de Tabelas (Conforme os arquivos do Professor) */
+
+
+/* Classe para envolver a tabela (table wrapper) */
+.table-wrap {
+    overflow-x: auto; /*scroll horizontal */
+    -webkit-overflow-scrolling: touch; 
+    margin-bottom: 20px;
+    border: 1px solid #3a7bd5;
+    border-radius: 5px;
+}
+
+/* Força a largura mínima da tabela para forçar a rolagem em telas pequenas */
+.table-wrap table {
+    min-width: 700px; /* Usando o valores indicados pelos arquivos do professor */
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+.table-wrap th, .table-wrap td {
+    padding: 10px;
+    border: 1px solid #3a7bd5;
+    text-align: center;
+    /* Adicionado para não quebrar o texto muito em telas pequenas */
+    /* white-space: nowrap; */ 
+}
+
+
+/* Ajustes Mobile (max-width: 768px) */
+
+
+@media (max-width: 768px) {
+    
+    /* Reajusta a escala VW para que o texto não fique muito pequeno em telas pequenas */
+    h1 { font-size: 6vw; }
+    h2 { font-size: 4.5vw; }
+    p, li, th, td { font-size: 2.2vw; }
+    .footer p { font-size: 2vw; }
+
+    /* Configuração do menu para layout vertical (coluna) */
+    .nav-links {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .nav-links li {
+        width: 100%; 
+        border-bottom: 1px solid rgba(58, 123, 213, 0.5); 
+    }
+    
+    .nav-links li a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Ajuste para o Submenu em Mobile/Tablet (CSS-only) */
+    .submenu {
+        position: static; 
+        display: none; 
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: none;
+        text-align: center;
+    }
+
+    /* Exibe o submenu quando o item principal está focado (útil para toque/tab) */
+    .has-submenu:focus-within .submenu,
+    .has-submenu:active .submenu { 
+        display: block;
+    }
+    
+    /* Garante o ajuste correto das colunas em telas pequenas */
+    .menu-grid {
+        grid-template-columns: 1fr; /* Força uma coluna única */
+    }
+
+    
 }
