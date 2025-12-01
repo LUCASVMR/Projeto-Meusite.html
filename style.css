@@ -52,7 +52,7 @@ body::before {
   border-radius: 10px;
 }
 
-/* Regra essencial para Imagens Responsivas */
+/* Imagens Responsivas */
 img {
     max-width: 100%;
     height: auto; 
@@ -70,7 +70,7 @@ h1 {
   text-shadow: 0 0 10px rgba(58, 123, 213, 0.8);
   margin-bottom: 20px;
   
-  /* Ajuste de Fonte com VW */
+ 
   font-size: 4.5vw; 
 }
 
@@ -81,7 +81,7 @@ h2 {
   margin-top: 30px;
   margin-bottom: 15px;
   
-  /* Ajuste de Fonte com VW */
+
   font-size: 3vw; 
 }
 
@@ -90,7 +90,7 @@ p, li {
   margin-bottom: 15px;
   line-height: 1.8;
   
-  /* Ajuste de Fonte com VW */
+
   font-size: 1.6vw; 
 }
 
@@ -102,9 +102,7 @@ p, li {
 }
 
 
-/* Menu de Navegação */
-
-
+/* Menu */
 .menu {
   background: rgba(15, 15, 15, 0.95);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -172,10 +170,10 @@ nav {
 
 
 
-/* 3. Responsividade de Tabelas (Conforme os arquivos do Professor) */
+/*Responsividade de Tabelas  */
 
 
-/* Classe para envolver a tabela (table wrapper) */
+/* Classe para envolver a tabela(table wrapper) */
 .table-wrap {
     overflow-x: auto; /*scroll horizontal */
     -webkit-overflow-scrolling: touch; 
@@ -186,7 +184,7 @@ nav {
 
 /* Força a largura mínima da tabela para forçar a rolagem em telas pequenas */
 .table-wrap table {
-    min-width: 700px; /* Usando o valores indicados pelos arquivos do professor */
+    min-width: 700px; 
     width: 100%; 
     border-collapse: collapse;
 }
@@ -201,11 +199,8 @@ nav {
 
 
 /* Ajustes Mobile (max-width: 768px) */
-
-
 @media (max-width: 768px) {
     
-    /* Reajusta a escala VW para que o texto não fique muito pequeno em telas pequenas */
     h1 { font-size: 6vw; }
     h2 { font-size: 4.5vw; }
     p, li, th, td { font-size: 2.2vw; }
@@ -237,16 +232,17 @@ nav {
         text-align: center;
     }
 
-    /* Exibe o submenu quando o item principal está focado (útil para toque/tab) */
+    /* Exibe o submenu quando o item principal está focado */
     .has-submenu:focus-within .submenu,
     .has-submenu:active .submenu { 
         display: block;
     }
     
-    /* Garante o ajuste correto das colunas em telas pequenas */
+    
     .menu-grid {
-        grid-template-columns: 1fr; /* Força uma coluna única */
+        grid-template-columns: 1fr; 
     }
 
     
+
 }
