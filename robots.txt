@@ -1,0 +1,35 @@
+# Parceiro de Programacao: Documentação para robots.txt e SEO Básico
+
+
+# robots.txt (Requisitos Obrigatórios)
+
+
+# User-agent: * (Aplicável a todos os robôs)
+User-agent: *
+
+# Permitir rastreamento em todo o site
+Allow: /
+
+# Bloqueios específicos conforme o checklist do professor
+# Bloqueia URLs com parâmetros (sessions, etc.)
+Disallow: /*?sessionid=
+
+# Bloqueios de pastas e arquivos de teste (Admin/Tmp/Arquivos de aula)
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /1-viewport.html
+Disallow: /2-img-basic.html
+Disallow: /3-img-srcset.html
+Disallow: /4-picture.html
+Disallow: /5-table-wrapper.html
+Disallow: /6-iframe-wrapper.html
+Disallow: /7-form-mobile.html
+Disallow: /8-estrutura-semantica.html
+Disallow: /menu_responsivo.html
+
+
+#  Sitemap XML (Referenciado)
+
+
+# Referencia o seu arquivo sitemap.xml com o link real do seu projeto
+Sitemap: https://lucasvmr.github.io/Projeto-Meusite.html/sitemap.xml
