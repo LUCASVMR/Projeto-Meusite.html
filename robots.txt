@@ -1,5 +1,3 @@
-# Parceiro de Programacao: Documentação para robots.txt e SEO Básico
-
 
 # robots.txt (Requisitos Obrigatórios)
 
@@ -29,7 +27,6 @@ Disallow: /menu_responsivo.html
 
 
 #  Sitemap XML (Referenciado)
-
 
 # Referencia o seu arquivo sitemap.xml com o link real do seu projeto
 Sitemap: https://lucasvmr.github.io/Projeto-Meusite.html/sitemap.xml
