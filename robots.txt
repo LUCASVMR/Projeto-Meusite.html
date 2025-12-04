@@ -30,3 +30,4 @@ Disallow: /menu_responsivo.html
 
 # Referencia o seu arquivo sitemap.xml com o link real do seu projeto
 Sitemap: https://lucasvmr.github.io/Projeto-Meusite.html/sitemap.xml
+
